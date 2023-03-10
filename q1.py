@@ -61,6 +61,13 @@ else:
             elif i.endswith('S'):
                 if len(size_s) != 0:
                     requested_size_str.remove(i)
+                    size_s.pop(0)
+                else:
+                    print('No')
+            
+            elif i.endswith('L'):
+                if len(size_l) != 0:
+                    requested_size_str.remove(i)
                     size_l.pop(0)
                 else:
                     print('No')
@@ -69,9 +76,3 @@ else:
         if len(requested_size_str) == 0:
             print('Yes')
             
-
-    
-    
-    
-
-
