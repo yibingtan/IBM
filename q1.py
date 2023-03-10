@@ -32,7 +32,7 @@ else:
                 if 'M' in sizes_str:
                     requested_size_str.remove(i)
                     sizes_str.remove('M')
-                if 'L' in size_l:
+                if 'L' in sizes_str:
                     requested_size_str.remove(i)
                     sizes_str.remove('L')
                 if len(size_l) != 0:
@@ -41,6 +41,10 @@ else:
                 else:
                     print('No')
             elif i == 'M':
+                if 'L' in sizes_str:
+                    requested_size_str.remove(i)
+                    sizes_str.remove('L')
+            
                 if len(size_l) != 0:
                     requested_size_str.remove(i)
                     size_l.pop(0)
