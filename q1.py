@@ -24,7 +24,7 @@ else:
             if i.endswith('L'):
                 size_l.append(i)
                 sizes_str.remove(i)
-        size_s = sorted(size_s, key=len)
+        size_s = sorted(size_s, key=len, reverse = True)
         size_l = sorted(size_l, key=len)
                 
         for i in requested_size_str:
@@ -53,6 +53,14 @@ else:
                     size_l.pop(0)
                 else:
                     print('No')
+            
+            elif i.endswith('S'):
+                if len(size_s) != 0:
+                    requested_size_str.remove(i)
+                    size_l.pop(0)
+                else:
+                    print('No')
+            
 
         if len(requested_size_str) == 0:
             print('Yes')
