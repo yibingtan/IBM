@@ -18,10 +18,10 @@ else:
         sizes_str.remove(common[i])
         requested_size_str.remove(common[i])
         for i in sizes_str:
-            if i.endswith('S'):
+            if i.endswith('S') and len(i) != 1:
                 size_s.append(i)
                 sizes_str.remove(i)
-            if i.endswith('L'):
+            if i.endswith('L') and len(i) != 1:
                 size_l.append(i)
                 sizes_str.remove(i)
         size_s = sorted(size_s, key=len, reverse = True)
